@@ -1,0 +1,303 @@
+
+.main{
+  height: 100%;
+  padding-bottom: 100px;
+  background: linear-gradient(#193f5a, #1f2a44);
+}
+
+.about-game{
+  padding-top: 150px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+
+.main-title{
+  display: flex;
+  justify-content: left;
+  padding:  0px 0px 15px 120px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+
+.primary-title{
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.huhu{
+  margin-bottom: 50px;
+}
+
+.nah{
+  margin-left: 120px;
+  margin-right: 50px;
+  border-radius: 3px;
+  padding: 5px 0 5px 0;
+  background-color: #0E141B;
+  justify-content: space-between;
+}
+
+.padding{
+  display: flex;
+  justify-content: space-between;
+}
+
+.padding i{
+  color: #fff;
+  font-size: 22px;
+  padding: 20px;
+}
+
+.heh{
+  height: 300px;
+  padding: 10px 0px 10px 10px;
+  display: flex;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.huh p{
+  font-size: 16px;
+  color: #76808C;
+}
+
+#title{
+  padding: 12px 0px 10px 0;
+}
+
+#wishlist{
+  display: flex;
+}
+
+.art-game{
+  width: 175px;
+}
+
+.art-game img{
+  width: 161px;
+  padding: 0px 0px 10px 10px;
+}
+
+#info{
+  font-size: 20px;
+  color: #fff;
+}
+
+#info a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.primary-info{
+  color: #76808C;
+  font-size: 14px;
+}
+
+.primary-info i{
+  color: #76808C;
+}
+
+#more{
+  display: flex;
+  padding-top: 15px;
+  align-items: center;
+  gap: 5px;
+}
+
+#more p{
+  background: #1E2329;
+  padding: 8px 10px;
+  font-size: 10px;
+  border-radius: 3px;
+  padding-top: 10px;
+}
+
+#more i{
+  padding: 6px;
+  font-size: 14px;
+  margin-left: 1px;
+  background: #1E2329;
+  border-radius: 3px;
+}
+
+#right{
+  display: flex;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  height: 55px;
+  padding-left: 180px;
+}
+
+#ignore{
+  margin: 10px 1px 5px 5px;
+  padding: 12px 15px;
+  border: 1px solid #1E2329;
+  border-radius: 3px;
+}
+
+#wishlist{
+  margin: 10px 12px 5px 5px;
+  padding: 13px 15px;
+  background-color: #1E2329;
+  border-radius: 3px;
+}
+
+#logo{
+  display: flex;
+  align-items: center;
+  padding: 20px 0 0 0;
+  gap: 5px;
+  color: #76808C;
+  font-size: 14px;
+}
+
+#logo i{
+  color: #76808C;
+  padding: 0px 3px;
+}
+
+.emotion{
+  display: flex;
+  padding-top: 25px;
+  font-size: 14px;
+}
+
+.like{
+  display: flex;
+  color: #66C0F4;
+  align-items: center;
+}
+
+.like i{
+  color: #66c0f489;
+  padding: 0px 0px 5px 5px;
+  font-size: 14px;
+}
+
+.dislike{
+  align-items: center;
+  display: flex;
+  color: #CD5444;
+  padding: 0px 0px 0px 80px;
+}
+
+.dislike i{
+  color: #cd544489;
+  padding: 0px 0px 0px 5px;
+  font-size: 14px;
+}
+
+.bar{
+  display: flex;
+  gap: 2px;
+}
+
+.bar p{
+    color: #4B619B;
+    margin-top: -12px;
+    padding-left: 12px;
+    font-size: 13px;
+
+}
+
+div .blue{
+  width: 140px;
+  height: 3px;  
+  background: #66c0f4cc;
+  border-radius: 5px;
+}
+
+div .red{
+  width: 25px;
+  height: 3px;  
+  background: #cd5444cc;
+  border-radius: 5px;
+}
+
+div .light{
+  width: 120px;
+  height: 3px;  
+  background: #66c0f4cc;
+  border-radius: 5px;
+}
+
+div .dark{
+  width: 55px;
+  height: 3px;  
+  background: #cd5444cc;
+  border-radius: 5px;
+}
+
+.no{
+  display: flex;
+  padding-top: 50px;
+  align-items: end;
+}
+
+.no p{
+  font-weight: 350;
+  font-size: 16px;  
+  border: 2px solid #1E2329;
+  padding: 15px 15px;
+  border-radius: 3px;
+}
+
+.end{
+  display: flex;
+  padding: 195px 0px 0px 0px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.end p{
+  display: flex;
+  align-items: end;
+  color: #76808C;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+.sale{
+  padding: 0px 12px; 
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  background: #A1CD44;
+  border-radius: 3px;
+  font-weight: 600;
+  height: 40px;
+}
+
+.line{
+  margin: 8px -65px 0px 0px;
+  width: 55px;
+  height: 1px;
+  background-color: #76808C;
+  z-index: 10;
+}
+
+.end li:first-child{
+  color: #313843;
+  font-weight: 600;
+}
+
+.end li:last-child{
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  padding-top: 6px;
+}
+
+.end span{
+  color: #fff;
+  font-size: 13px;
+  background-color: #1E2329;
+  padding: 14px 12px 12px 12px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
