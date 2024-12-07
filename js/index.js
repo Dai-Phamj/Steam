@@ -15,6 +15,8 @@ fetch("https://6753bb73f3754fcea7bc56af.mockapi.io/Steam")
     
     game.forEach((game) => {  
       const templates = `
+      <div class="move">
+        <i class="fa-solid fa-angle-left btn"></i>
         <div class="game">
             <img src="${game.gameArt}" alt="">
             <div class="info">
@@ -54,27 +56,23 @@ fetch("https://6753bb73f3754fcea7bc56af.mockapi.io/Steam")
                 </div>
             </div>
          </div>
+         <a href=""><i class="fa-solid fa-angle-right btn"></i></a>
+        </div>
     `;
     
       productList.insertAdjacentHTML("beforeend", templates);
     });
     
-    const productBtn = document.querySelectorAll(".product-btn");
+    const move = document.querySelectorAll(".tn");
     let count = 0;
     productBtn.forEach((btn) => {
       btn.addEventListener("click", () => {
         count++;
         if (count > 0) {
-          const headerQuantity = document.querySelector(".header-quantity");
-          headerQuantity.style.display = "flex";
-          if (count < 100) {
-            headerQuantity.textContent = count;
-          } else {
-            headerQuantity.textContent = "99+";
-          }
         }
       });
-    });})
+    });
+  })
   .catch((err) => {
     //rejected
     console.log(err);
@@ -82,21 +80,14 @@ fetch("https://6753bb73f3754fcea7bc56af.mockapi.io/Steam")
 
 
 
-
-
-
-
-
-
-//  var count = 0;
-//         var inc = 0;
-//         var margin = 0;
-//         var slider = document.getElementsByClassName("slider-width")[0];
-//         var itemDisplay = 0;
-//         if(screen.width > 990){
-//             itemDisplay = document.getElementsByClassName("slider-container")[0].getAttribute("item-display-d");
-//             margin = itemDisplay * 5;
-//         }
+        var inc = 0;
+        var margin = 0;
+        var slider = document.getElementsByClassName("game")[0];
+        var itemDisplay = 0;
+        if(screen.width > 990){
+            itemDisplay = document.getElementsByClassName("slider-container")[0].getAttribute("item-display-d");
+            margin = itemDisplay * 5;
+        }
 //         if(screen.width > 700 && screen.width < 990){
 //             itemDisplay = document.getElementsByClassName("slider-container")[0].getAttribute("item-display-t");
 //             console.log(itemDisplay);
@@ -108,36 +99,36 @@ fetch("https://6753bb73f3754fcea7bc56af.mockapi.io/Steam")
 
 //         }
 
-//         var item = document.getElementsByClassName("item");
-//         var itemLeft = item.length % itemDisplay;
-//         var itemSlide = Math.floor(item.length / itemDisplay) - 1;  
-//         for (let i = 0; i < item.length; i++){
-//             item[i].style.width = (screen.width / itemDisplay) - margin + "px";
-//         };
+        var item = document.getElementsByClassName("item");
+        var itemLeft = item.length % itemDisplay;
+        var itemSlide = Math.floor(item.length / itemDisplay) - 1;  
+        for (let i = 0; i < item.length; i++){
+            item[i].style.width = (screen.width / itemDisplay) - margin + "px";
+        };
         
-//         function next() {
-//             if (inc !== itemSlide + itemLeft){
-//                 if(inc === itemSlide){
-//                     inc = inc + itemLeft;
-//                     count = count - (screen.width / itemDisplay) * itemLeft;
-//                 }   else {
-//                     inc ++;
-//                     count = count - screen.width;
-//                 }
-//             };
-//             slider.style.left = count + "px";
-//         };
+        function next() {
+            if (inc !== itemSlide + itemLeft){
+                if(inc === itemSlide){
+                    inc = inc + itemLeft;
+                    count = count - (screen.width / itemDisplay) * itemLeft;
+                }   else {
+                    inc ++;
+                    count = count - screen.width;
+                }
+            };
+            slider.style.left = count + "px";
+        };
 
-//         function prev(){
-//             if (inc !== 0){
-//                 if(inc === itemLeft){
-//                     inc = inc - itemLeft;
-//                     count = count + (screen.width / itemDisplay) * itemLeft;
-//                 } else {
-//                     inc --;
-//                     count = count + screen.width;
-//                 };
-//             };
-//             slider.style.left = count + "px";
-// };
+        function prev(){
+            if (inc !== 0){
+                if(inc === itemLeft){
+                    inc = inc - itemLeft;
+                    count = count + (screen.width / itemDisplay) * itemLeft;
+                } else {
+                    inc --;
+                    count = count + screen.width;
+                };
+            };
+            slider.style.left = count + "px";
+};
 
