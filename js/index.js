@@ -1,22 +1,24 @@
-import { game } from "./data.js"; 
+import { game } from "./data.js";
+console.log(game);
 
-fetch("https://6753bb73f3754fcea7bc56af.mockapi.io/Steam")
-.then(response => response.json())
+fetch("https://6754543236bcd1eec850d9a5.mockapi.io/api/v1/game")
+  .then((response) => response.json())
+
   .then((data) => {
+    console.log(data);
     // productData = data;
-    const game = document.querySelector(".game");
+    const move = document.querySelector(".mid");
 
     console.log(game);
     const bone = document.createElement("div");
     // productList.className = "product-list"
     bone.classList.add("bone");
-    console.log(productList);
-    game.insertAdjacentElement("beforeend", bone);
-    
-    game.forEach((game) => {  
+    console.log(bone);
+    move.insertAdjacentElement("beforeend", bone);
+    console.log(move);
+
+    game.forEach((game) => {
       const templates = `
-      <div class="move">
-        <i class="fa-solid fa-angle-left btn"></i>
         <div class="game">
             <img src="${game.gameArt}" alt="">
             <div class="info">
@@ -56,79 +58,36 @@ fetch("https://6753bb73f3754fcea7bc56af.mockapi.io/Steam")
                 </div>
             </div>
          </div>
-         <a href=""><i class="fa-solid fa-angle-right btn"></i></a>
-        </div>
     `;
-    
-      productList.insertAdjacentHTML("beforeend", templates);
+
+      bone.insertAdjacentHTML("beforeend", templates);
     });
-    
-    const move = document.querySelectorAll(".tn");
-    let count = 0;
-    productBtn.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        count++;
-        if (count > 0) {
-        }
+
+    const btnSliderNext = document.querySelector(".btn-slider-next");
+    const btnSliderPrev = document.querySelector(".btn-slider-prev");
+
+    const candy = document.querySelectorAll(".another-game .candy");
+    let currLocation = 0; //Vị trí ban đầu
+    btnSliderNext.addEventListener("click", () => {
+      if (currLocation >= candy.length - 1) return;
+      currLocation++;
+      bone.style.marginLeft = `calc(-1200px * ${currLocation})`;
+
+      candy.forEach((item) => {
+        item.classList.remove("nav");
       });
+      candy[currLocation].classList.add("nav");
     });
-  })
-  .catch((err) => {
-    //rejected
-    console.log(err);
-});
 
+    btnSliderPrev.addEventListener("click", () => {
+      if (currLocation <= 0) return;
+      currLocation--;
 
+      bone.style.marginLeft = `calc(-1200px * ${currLocation})`;
 
-        var inc = 0;
-        var margin = 0;
-        var slider = document.getElementsByClassName("game")[0];
-        var itemDisplay = 0;
-        if(screen.width > 990){
-            itemDisplay = document.getElementsByClassName("slider-container")[0].getAttribute("item-display-d");
-            margin = itemDisplay * 5;
-        }
-//         if(screen.width > 700 && screen.width < 990){
-//             itemDisplay = document.getElementsByClassName("slider-container")[0].getAttribute("item-display-t");
-//             console.log(itemDisplay);
-//             margin = itemDisplay * 6.8;
-//         }
-//         if(screen.width > 280 && screen.width < 700){
-//             itemDisplay = document.getElementsByClassName("slider-container")[0].getAttribute("item-display-m");
-//             margin = itemDisplay * 20;
-
-//         }
-
-        var item = document.getElementsByClassName("item");
-        var itemLeft = item.length % itemDisplay;
-        var itemSlide = Math.floor(item.length / itemDisplay) - 1;  
-        for (let i = 0; i < item.length; i++){
-            item[i].style.width = (screen.width / itemDisplay) - margin + "px";
-        };
-        
-        function next() {
-            if (inc !== itemSlide + itemLeft){
-                if(inc === itemSlide){
-                    inc = inc + itemLeft;
-                    count = count - (screen.width / itemDisplay) * itemLeft;
-                }   else {
-                    inc ++;
-                    count = count - screen.width;
-                }
-            };
-            slider.style.left = count + "px";
-        };
-
-        function prev(){
-            if (inc !== 0){
-                if(inc === itemLeft){
-                    inc = inc - itemLeft;
-                    count = count + (screen.width / itemDisplay) * itemLeft;
-                } else {
-                    inc --;
-                    count = count + screen.width;
-                };
-            };
-            slider.style.left = count + "px";
-};
-
+      candy.forEach((item) => {
+        item.classList.remove("nav");
+      });
+      candy[currLocation].classList.add("nav");
+    });
+  });

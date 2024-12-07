@@ -54,7 +54,7 @@ const game = [
         gameArt4: "./img/raft-gameplay4.jpg",
         gamePrice: 59.99,
     },
-{
+    {
         gameId: 6,
         gameName: "Little Nightmares",
         gameDesc: "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
